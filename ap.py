@@ -12,31 +12,31 @@ class CirLatConverter(QMainWindow):
         self.initUI()
     
     def initUI(self):
-        # Window settings
+        # Podešavanja prozora
         self.setWindowTitle("CirLat konverter")
         self.setGeometry(300, 300, 800, 600)
         
-        # SET ICON - ico.ico from same folder
+        # POSTAVI IKONU - ico.ico iz istog direktorijuma
         self.setWindowIcon(QIcon("ico.ico"))
         
         self.center()
         
-        # Central widget
+        # Centralni vidžet
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         
-        # Main layout
+        # IZGLED
         main_layout = QVBoxLayout()
         main_layout.setContentsMargins(20, 20, 20, 20)
         main_layout.setSpacing(20)
         
-        # Title
+        # NASLOV
         title = QLabel("CirLat konverter")
         title.setAlignment(Qt.AlignCenter)
         title.setStyleSheet("font-size: 28px; font-weight: bold; color: #2c3e50; margin: 10px;")
         main_layout.addWidget(title)
         
-        # Input text area
+        # POLJE ZA UBACIVANJE TEKSTA
         self.text_input = QTextEdit()
         self.text_input.setPlaceholderText("Unesite tekst ovde...")
         self.text_input.setMinimumHeight(200)
@@ -53,7 +53,7 @@ class CirLatConverter(QMainWindow):
         """)
         main_layout.addWidget(self.text_input)
         
-        # Buttons - SVAKO DUGME JEDNO ISPOD DRUGOG
+        # DUGMAD ZA APLIKACIJU
         self.cir_to_lat_btn = QPushButton("Cir → Lat")
         self.cir_to_lat_btn.clicked.connect(self.cir_to_lat)
         self.style_button(self.cir_to_lat_btn, "#27ae60")
@@ -74,18 +74,18 @@ class CirLatConverter(QMainWindow):
         self.style_button(self.exit_btn, "#95a5a6")
         main_layout.addWidget(self.exit_btn)
         
-        # Footer
+        # FOOTER
         footer = QLabel("Software created by Šamec Uglješa © 2025")
         footer.setAlignment(Qt.AlignCenter)
         footer.setStyleSheet("font-size: 12px; color: #7f8c8d; margin-top: 20px;")
         main_layout.addWidget(footer)
         
-        # Add stretch to push footer to bottom
+        # Dodato rastezanje da bi se pomerilo podnožje na dno
         main_layout.addStretch()
         
         central_widget.setLayout(main_layout)
         
-        # Make responsive
+        # ZA RESPONZIVNOST
         self.setMinimumSize(400, 500)
     
     def style_button(self, button, color):
@@ -152,3 +152,4 @@ if __name__ == '__main__':
     window.show()
     
     sys.exit(app.exec_())
+
