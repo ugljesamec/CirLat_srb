@@ -2,11 +2,13 @@
 ### Serbian Version 2.0 – Local • Lightweight • Enterprise Utility
 
 <p align="center">
+
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![UI](https://img.shields.io/badge/UI-PyQt5-green)
 ![License](https://img.shields.io/badge/License-GPLv3-brightgreen)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-yellow)
 ![Version](https://img.shields.io/badge/Version-2.0-orange)
+
 </p>
 
 ---
@@ -54,22 +56,26 @@
 
 ---
 
-📷 Screenshot
+## 📷 Screenshot
 
+![ZeroBreach UI](cirlat.png)
 ---
 
-🛠 Struktura projekta
+## 🛠 Struktura projekta
+
+```
 cirlat-konverter/
 │
-├─ app.py            # Glavni PyQt5 kod
-├─ ap.py             # Početna verzija aplikacije PyQt5 kod
+├─ app.py            # Glavna verzija
+├─ ap.py             # Početna verzija aplikacije
 ├─ ico.ico           # Ikonica prozora (opciono)
 ├─ requirements.txt  # Zavisnosti
 └─ README.md         # Ovaj fajl
+```
 
 ---
 
-🔄 Life-Cycle Aplikacije
+## 🔄 Life-Cycle Aplikacije
 
 Pokretanje aplikacije → prazno tekst polje
 
@@ -85,15 +91,17 @@ Zatvaranje aplikacije klikom na Izlaz
 
 ---
 
-🧩 Česti problemi & rešenja
-Problem	Rešenje
-Klik na istoriju ne radi	Proveri da li je tekst prethodno konvertovan i dodan u istoriju
-Tekst se ne kopira	Klikni "Kopiraj" dok je tekst u polju selektovan
-Aplikacija ne startuje	Proveri da li su instalirani PyQt5 i cyrtranslit
+## 🧩 Česti problemi & rešenja
+
+| Problem | Rešenje |
+|---------|---------|
+| Klik na istoriju ne radi | Proveri da li je tekst prethodno konvertovan i dodan u istoriju |
+| Tekst se ne kopira | Klikni "Kopiraj" dok je tekst u polju selektovan |
+| Aplikacija ne startuje | Proveri da li su instalirani `PyQt5` i `cyrtranslit` |
 
 ---
 
-🏆 Unikatne vrednosti
+## 🏆 Unikatne vrednosti
 
 Lakoća i brzina – samo lokalna aplikacija
 
@@ -105,7 +113,7 @@ Minimalne zavisnosti, spremno za distribuciju
 
 ---
 
-📜 Licenca
+## 📜 Licenca
 
 Ovaj projekat je objavljen pod GPLv3 licencom.
 Ako koristite ili modifikujete kod, dužni ste da zadržite autorstvo i objavite izmene pod istom licencom.
