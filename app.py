@@ -16,7 +16,7 @@ class CirLatConverter(QMainWindow):
         self.history = []
         self.initUI()
 
-    # ================= UI =================
+    # UI
 
     def initUI(self):
         self.setWindowTitle("CirLat konverter version 2.0")
@@ -35,13 +35,13 @@ class CirLatConverter(QMainWindow):
         main_layout.setContentsMargins(20, 20, 20, 20)
         main_layout.setSpacing(15)
 
-        # ===== TITLE =====
+        # TITL
         title = QLabel("CirLat konverter")
         title.setAlignment(Qt.AlignCenter)
         title.setStyleSheet("font-size: 26px; font-weight: bold;")
         main_layout.addWidget(title)
 
-        # ===== TEXT AREA =====
+        # POLJE ZA TEKST
         self.text_input = QTextEdit()
         self.text_input.setPlaceholderText("Unesite tekst ovde...")
         self.text_input.setMinimumHeight(200)
@@ -55,7 +55,7 @@ class CirLatConverter(QMainWindow):
         """)
         main_layout.addWidget(self.text_input, 4)
 
-        # ===== BUTTONS =====
+        # DUGMAD ZA APP
         self.cir_to_lat_btn = QPushButton("Cir → Lat")
         self.cir_to_lat_btn.clicked.connect(self.cir_to_lat)
 
@@ -102,7 +102,7 @@ class CirLatConverter(QMainWindow):
             """)
             main_layout.addWidget(btn)
 
-        # ===== HISTORY =====
+        # ISTORIJA
         history_label = QLabel("Istorija konverzija:")
         history_label.setAlignment(Qt.AlignLeft)
         main_layout.addWidget(history_label)
@@ -111,7 +111,7 @@ class CirLatConverter(QMainWindow):
         self.history_list.itemClicked.connect(self.load_from_history)
         main_layout.addWidget(self.history_list, 1)
 
-        # ===== FOOTER =====
+        # FOOTER
         footer = QLabel("Software created by Šamec Uglješa © 2026")
         footer.setAlignment(Qt.AlignCenter)
         footer.setStyleSheet("font-size: 11px; color: gray; margin-top: 10px;")
@@ -119,7 +119,7 @@ class CirLatConverter(QMainWindow):
 
         central_widget.setLayout(main_layout)
 
-    # ================= CONVERSION =================
+    # PREBACIVANJE TEKSTA
 
     def cir_to_lat(self):
         text = self.text_input.toPlainText()
@@ -137,7 +137,7 @@ class CirLatConverter(QMainWindow):
             self.text_input.setPlainText(converted)
             self.statusBar().showMessage("Konverzija završena", 2000)
 
-    # ================= HISTORY =================
+    # ISTORIJA
 
     def add_to_history(self, direction, original, converted):
         self.history.append((direction, original, converted))
@@ -155,7 +155,7 @@ class CirLatConverter(QMainWindow):
         self.history_list.clear()
         self.statusBar().showMessage("Istorija obrisana", 2000)
 
-    # ================= UTIL =================
+    # DODATNA FUNKCIONALNOST
 
     def copy_text(self):
         clipboard = QApplication.clipboard()
@@ -175,7 +175,7 @@ class CirLatConverter(QMainWindow):
         self.move(frame_geometry.topLeft())
 
 
-# ================= MAIN =================
+# MAIN
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
@@ -183,5 +183,6 @@ if __name__ == '__main__':
 
     window = CirLatConverter()
     window.show()
+
 
     sys.exit(app.exec_())
